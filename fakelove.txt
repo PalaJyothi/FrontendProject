@@ -1,0 +1,77 @@
+<html><head>
+  <style>
+	body {
+  background-color: rgb(210, 121, 121);
+ 
+  /* Smoothly transition the background color */
+  transition: background-color .5s;
+}
+ 
+/* Using flex with the column direction to
+   align items in a vertical direction */
+.player {
+  height: 95vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+ 
+.details {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 25px;
+}
+ 
+.track-art {
+  margin: 25px;
+  height: 250px;
+  width: 250px;
+  background-image: URL(
+     'file:///C:Users/jyothi/Downloads/fakelove.jpg');
+  background-size: cover;
+  background-position: center;
+  border-radius: 15%;
+}
+ 
+/* Changing the font sizes to suitable ones */
+.now-playing {
+  font-size: 1rem;
+}
+ 
+.track-name {
+  font-size: 3rem;
+}
+ 
+.track-artist {
+  font-size: 1.5rem;
+}
+ 
+  </style>
+</head>
+<body>
+  <div class="player">
+ 
+    <!-- Define the section for displaying details -->
+	
+    <div class="details">
+      <div class="now-playing">TORNADO MUSIC </div>
+      <div class="track-art"></div>
+      <div class="track-name">Fake Love</div>
+      <div class="track-artist">BTS</div>
+	<audio controls>
+  	<source src="C:\Users\jyothi\Downloads\fakelove.mp3" type="audio/mpeg">
+	</audio>
+ 
+    </div>
+	
+ 
+
+  
+ 
+  <!-- Load the main script for the player -->
+  <script src="main.js"></script>
+
+</body></html>

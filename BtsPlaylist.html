@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>BTS PLAYLIST</title>
+ <link href="https://fonts.googleapis.com/css?family=Maven+Pro&display=swap" rel="stylesheet">
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+ 
+ <style>
+	*{
+ margin: 0; padding: 0;
+ box-sizing: border-box; font-family: 'Maven Pro', sans-serif;
+ background-image: linear-gradient(to top, #a18cd1 0%, #fbc2eb 100%);
+}
+
+h1{
+ text-align: center; font-size: 1.8rem;
+ color: #444; padding: 30px 0; 
+}
+
+main{
+ width: 90%; height: 550px;
+ margin: auto; border: 0px solid black;
+ display: flex; justify-content: space-around;
+ align-items: center; flex-wrap: wrap;
+}
+
+div{
+ width: 260px; height: 260px;
+ border: 1px solid grey;
+ box-shadow: 2px 2px 5px black;
+ border-radius: 10px; cursor: pointer;
+
+}
+
+.a{
+  background-image: url('file:///C:/Users/jyothi/Downloads/dynamite.png');
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+.b{
+background-image: url('file:///C:/Users/jyothi/Downloads/wings.jpg');
+background-size: 100% 100%;
+background-repeat: no-repeat;
+}
+
+.c{
+background-image: url('file:///C:/Users/jyothi/Downloads/fakelove.jpg');
+background-size: 100% 100%;
+background-repeat: no-repeat;
+}
+
+.d{
+background-image: url('file:///C:/Users/jyothi/Downloads/boywithlove.jpg');
+background-size: 100% 100%;
+background-repeat: no-repeat;
+}
+
+.e{
+background-image: url('file:///C:/Users/jyothi/Downloads/springday.jpg');
+background-size: 100% 100%;
+background-repeat: no-repeat;
+}
+.f{
+background-image: url('file:///C:/Users/jyothi/Downloads/micdrop.png');
+background-size: 100% 100%;
+background-repeat: no-repeat;
+}
+.g{
+background-image: url('file:///C:/Users/jyothi/Downloads/on.jpg');
+background-size: 100% 100%;
+background-repeat: no-repeat;
+}
+
+.h{
+background-image: url('file:///C:/Users/jyothi/Downloads/dna.jpg');
+background-size: 100% 100%;
+background-repeat: no-repeat;
+}
+
+ </style>
+
+</head>
+<body>
+
+
+<h1><i class="fa fa-music" aria-hidden="true"></i> Best of BTS Songs<i class="fa fa-music" aria-hidden="true"></i> </h1>
+
+
+<main>
+  
+<div style="color:white" class="a song">Dynamite</div> 
+<div class="b song">Blood Sweat and Tears</div> 
+<div style="color:white" class="c song">Fake Love</div> 
+
+<div class="d song">Boy with Love</div> 
+<div class="e song">Spring Day</div> 
+<div style="color:white" class="f song">Mic Drop</div>
+
+<div class="g song">ON</div> 
+<div class="h song">DNA</div> 
+
+ 
+</main>
+
+
+
+<script>
+ 
+var divlenght = document.querySelectorAll('.song').length;
+console.log(divlenght);
+
+for(var i=0; i<divlenght; i++) {
+ var demo = document.querySelectorAll('.song')[i].addEventListener('click',playsong);
+
+ var demo = document.querySelectorAll('.song')[i].addEventListener('dblclick',pausesong);
+}
+
+var song1 = new Audio();
+song1.src = "file:///C:/Users/jyothi/Downloads/dynamite.mp3";
+
+var song2 = new Audio();
+song2.src = "file:///C:/Users/jyothi/Downloads/wings.mp3";
+
+var song3 = new Audio();
+song3.src = "file:///C:/Users/jyothi/Downloads/fakelove.mp3";
+
+var song4 = new Audio();
+song4.src = "file:///C:/Users/jyothi/Downloads/boywithlove.mp3";
+
+var song5 = new Audio();
+song5.src = "file:///C:/Users/jyothi/Downloads/springday.mp3";
+
+var song6 = new Audio();
+song6.src = "file:///C:/Users/jyothi/Downloads/micdrop.mp3";
+
+var song7 = new Audio();
+song7.src = "file:///C:/Users/jyothi/Downloads/on.mp3";
+
+var song8 = new Audio();
+song8.src = "file:///C:/Users/jyothi/Downloads/dna.mp3";
+
+
+function playsong(){
+ var songId = this.innerHTML;
+ console.log(songId);
+
+ switch (songId) {
+  case "Dynamite":
+   song1.play();
+   break;
+
+  case "Blood Sweat and Tears":
+   song2.play();
+   break;
+
+  case "Fake Love":
+   song3.play();
+   break;
+
+  case "Boy with Love":
+   song4.play();
+   break;
+
+  case "Spring Day":
+   song5.play();
+   break;
+
+  case "Mic Drop":
+   song6.play();
+   break;
+
+  case "ON":
+   song7.play();
+   break;
+
+  case "DNA":
+   song8.play();
+   break;
+
+  
+
+  default:
+   console.log("wrong input");
+   break;
+ }
+}
+
+function pausesong(){
+ var songId = this.innerHTML;
+ console.log(songId);
+
+ switch (songId) {
+  case "Dynamite":
+   song1.pause();
+   break;
+
+  case "Blood Sweat and Tears":
+   song2.pause();
+   break;
+
+  case "Fake Love":
+   song3.pause();
+   break;
+
+  case "Boy with Love":
+   song4.pause();
+   break;
+
+  case "Spring Day":
+   song5.pause();
+   break;
+
+  case "Mic Drop":
+   song6.pause();
+   break;
+
+  case "ON":
+   song7.pause();
+   break;
+
+  case "DNA":
+   song8.pause();
+   break;
+
+ 
+
+  default:
+   console.log("wrong input");
+   break;
+ }
+}
+</script>
+</body>
+</html>
