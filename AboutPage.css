@@ -1,0 +1,38 @@
+*{
+	background-image: linear-gradient(to top, #a18cd1 0%, #fbc2eb 100%);
+	
+	}
+
+	div {
+	
+	background-color: lightgrey;
+	width:800px;
+  	border: 0px solid gray;
+  	 padding-top: 20px;
+  	padding-right: 300px;
+  	padding-bottom: 20px;
+  	padding-left: 300px;
+	Margin: 20px;
+	}
+	
+	h1 {
+  text-align: center;
+  text-transform: uppercase;
+  color: #600080;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+p {
+font-family: Arial, Helvetica, sans-serif;
+  text-indent: 50px;
+  text-align: justify;
+  letter-spacing: 3px;
+}
+
+a {
+  text-decoration: none;
+  color: #008CBA;
